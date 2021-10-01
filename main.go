@@ -11,7 +11,7 @@ import (
 
 func main() {
   r := raspi.NewAdaptor()
-  ads := i2c.NewADS1115Driver(adaptor, i2c.WithBus(0), i2c.WithAddress(0x40))
+  ads := i2c.NewADS1115Driver(adaptor, i2c.WithBus(0), i2c.WithAddress(ADS1x15DefaultAddress))
 
   # v, err := ads.Read(channel?, gain?, dataRate?)
   v, err := ads.ReadWithDefaults(channel?)
